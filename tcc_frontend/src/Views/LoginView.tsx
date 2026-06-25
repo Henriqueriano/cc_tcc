@@ -1,0 +1,10 @@
+export function LoginView() 
+{
+		return(
+				<div>
+						<h1>Foo!</h1>
+				</div>
+		);
+}
+
+export default LoginView;
