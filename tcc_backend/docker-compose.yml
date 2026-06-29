@@ -1,0 +1,27 @@
+services:
+  qlever-backend:
+    image: adfreiburg/qlever:commit-7bd9779 # freeze version.
+    container_name: qlever-backend
+    restart: unless-stopped
+    ports:
+      - "7001:7001"
+    volumes:
+      # Mount your local folder containing index files to /index inside the container
+      - ./my-index-folder:/index
+    environment:
+      # Replace 'olympics' with the prefix of your specific index files (e.g., olympics.index.bd)
+      - INDEX_PREFIX=olympics
+    command: ServerMain -p 7001 -i /index/vldb-easy
+
+  qlever-ui:
+    image: qleverdev/qlever-ui:latest
+    container_name: qlever-ui
+    restart: unless-stopped
+    ports:
+      - "7002:7002"
+    environment:
+      # Points the UI backend to the container name of the SPARQL engine
+      - QLEVER_BACKEND_URL=http://qlever-backend:7001
+    depends_on:
+      - qlever-backend
+
