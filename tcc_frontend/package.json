@@ -17,6 +17,7 @@
     "@types/bun": "latest",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "react-router-dom": "^7.18.0",
     "tailwindcss": "^4.3.1"
   }
 }
