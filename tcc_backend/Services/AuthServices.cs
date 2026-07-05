@@ -12,12 +12,12 @@ public class AuthServices : IAuthServices
       return true;
    }
 
-   async public Task<AuthReturnDto> Login(LoginDto payload)
+   async public Task<RetrieveAuthDto> Login(LoginDto payload)
    {
       throw new NotImplementedException();
    } 
 
-   public AuthReturnDto Register(RegisterDto payload) 
+   public RetrieveAuthDto Register(RegisterDto payload) 
    {
       throw new NotImplementedException();
    } 

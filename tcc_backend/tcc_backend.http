@@ -1,6 +1,0 @@
-@tcc_backend_HostAddress = http://localhost:5029
-
-GET {{tcc_backend_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

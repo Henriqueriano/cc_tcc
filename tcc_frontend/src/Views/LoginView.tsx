@@ -16,8 +16,9 @@ function LoginView()
 
             // todo: make login logic
             const payload: Object = {userLogin: login, userPass: password};
+
             if (true)
-                navigate("/features");
+                navigate("/main");
         }
 
 		return(

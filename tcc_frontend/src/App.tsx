@@ -1,7 +1,7 @@
 import './index.css';
 import LoginView from './Views/LoginView.tsx';
 import DashBoardView from './Views/DashBoardView.tsx';
-import FeaturesView from './Views/FeaturesView.tsx';
+import MainView from './Views/MainView.tsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -11,7 +11,7 @@ export function App() {
             <Routes>
                 < Route path='/' element = { <LoginView /> } />
                 < Route path='/dashboard' element = { <DashBoardView /> } />
-                    < Route path='/features' element = { <FeaturesView /> } />
+                < Route path='/main' element = { <MainView /> } />
             </Routes>
           </BrowserRouter>
       );

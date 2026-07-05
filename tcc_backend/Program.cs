@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IAuthServices, AuthServices>();
+builder.Services.AddScoped<IRDFServices, RDFServices>();
 
 builder.Services.AddCors(options =>
 {

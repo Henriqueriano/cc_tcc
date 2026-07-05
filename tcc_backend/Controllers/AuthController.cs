@@ -18,16 +18,16 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost(Name = "login")]
-    public async Task<AuthReturnDto> Login(LoginDto request)
+    public async Task<RetrieveAuthDto> Login(LoginDto request)
     {
         if (string.IsNullOrEmpty(request.UserLogin) || string.IsNullOrEmpty(request.UserPassword))
             throw new ArgumentException("Username and password must be provided.");
 
-        AuthReturnDto response = await _authServices.Login(request);
+        RetrieveAuthDto response = await _authServices.Login(request);
 
         if (string.IsNullOrEmpty(response.Token)) 
         {
-           AuthReturnDto backdata = new AuthReturnDto(); 
+           RetrieveAuthDto backdata = new RetrieveAuthDto(); 
         }
 
         response.Token = "mocked_token";
