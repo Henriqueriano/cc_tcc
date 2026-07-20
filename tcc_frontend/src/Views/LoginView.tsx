@@ -15,10 +15,10 @@ function LoginView()
             submitEvent.preventDefault();
 
             // todo: make login logic
-            const payload: Object = {userLogin: login, userPass: password};
+            // const payload: Object = {userLogin: login, userPass: password};
 
             if (true)
-                navigate("/main");
+                navigate("/home");
         }
 
 		return(
