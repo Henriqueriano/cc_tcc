@@ -1,3 +1,4 @@
+import HomeViewGraph from '@/Components/HomeViewGraph.tsx';
 import HandleFeaturesComponent from '../Components/HandleFeaturesComponent.tsx';
 import HomeViewResourcesList from '@/Components/HomeViewResourcesList.tsx';
 function HomeView() 
@@ -11,7 +12,7 @@ function HomeView()
             <section className = 'col-span-5 h-screen'>
                 <div className = 'flex h-1/2 gap-4 pb-4'>
                     <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center bg-gray-500/25 border-2 border-white'>
-                            <b><p>Graphical View</p></b>
+                            <HomeViewGraph />
                     </div>
                     <div className = 'w-1/2 text-center overflow-auto border-2 border-white'>
                         <HomeViewResourcesList />
