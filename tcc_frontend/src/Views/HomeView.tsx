@@ -22,8 +22,8 @@ function HomeView()
                     <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center'>
                         <b><p>Numéric View</p></b>
                     </div>
-                    <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center'>
-                        <b><p>???</p></b>
+                    <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center bg-gray-500/25 border-2 border-white'>
+                        <b><p>Server Status View</p></b>
                     </div>
 
                </div>

@@ -9,6 +9,7 @@ function HandleFeaturesComponent()
     const features: Array<mock> = [
         {name: 'mocked_view_data', description: '1', link: 'https://www.scielo.br/j/ci/a/sp3XpmZhXw384H5Fw9H89YL/?format=html&lang=pt'},
         {name: 'mocked_view_rdf', description: '2', link: 'https://www.typescriptlang.org/docs/handbook/2/objects.html'},
+        {name: 'go_back', description: '2', link: 'https://www.typescriptlang.org/docs/handbook/2/objects.html'},
     ];
 
     function handleMouseClick(element: any) 

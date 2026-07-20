@@ -6,15 +6,15 @@ function HomeViewResourcesList()
         resource: string,
         amount: number,
         percent: number,
-        status: string
+        description: string
     }
     const mocked_data: Array<mock> = [
-        {resource: 'cpu', amount: 50, percent: 50, status: 'crit'},
-        {resource: 'ram', amount: 50, percent: 50, status: 'crit'},
-        {resource: 'disk_usage', amount: 50, percent: 50, status: 'crit'},
-        {resource: 'requests', amount: 50, percent: 50, status: 'crit'},
-        {resource: 'requests_per_min', amount: 50, percent: 50, status: 'crit'},
-        {resource: 'database_status', amount: 50, percent: 50, status: 'crit'},
+        {resource: 'cpu', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'ram', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'disk_usage', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'requests', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'requests_per_min', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
     ]
     useEffect(() => {});
 
@@ -44,8 +44,8 @@ function HomeViewResourcesList()
 
                     {mocked_data.map((i) => {
                         return (
-                            <tr className="hover:bg-slate-50 hover:text-black text-white text-center">
-                                <td className="p-[]">
+                            <tr className="hover:bg-slate-50 hover:text-black text-white text-center border-2 border-white" title={i.description}>
+                                <td className="p-4">
                                 <p className="text-sm font-bold">
                                     {i.resource}
                                 </p>
@@ -60,7 +60,7 @@ function HomeViewResourcesList()
                                     {i.percent}
                                 </p>
                                 </td>
-                        </tr>
+                            </tr>
                         )
                     })}
 
