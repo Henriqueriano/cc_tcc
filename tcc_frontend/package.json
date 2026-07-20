@@ -9,15 +9,15 @@
     "start": "NODE_ENV=production bun src/index.ts"
   },
   "dependencies": {
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.3.1",
+    "@tailwindcss/cli": "4.3.1",
     "@types/bun": "latest",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "react-router-dom": "^7.18.0",
-    "tailwindcss": "^4.3.1"
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "react-router-dom": "7.18.0",
+    "tailwindcss": "4.3.1"
   }
 }
