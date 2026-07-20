@@ -15,13 +15,14 @@ function HomeViewResourcesList()
         {resource: 'requests', amount: 50, percent: 50, description: 'crit'},
         {resource: 'requests_per_min', amount: 50, percent: 50, description: 'crit'},
         {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
     ]
     useEffect(() => {});
 
     return (
-        <table className="w-full text-center table-auto min-w-max text-slate-800">
+        <table className="w-full text-center table-auto text-slate-800">
             <thead>
-                    <tr className="p-6 bg-gray-500/25 text-white rounded shadow-lg border-2 border-white">
+                    <tr className="p-6 bg-gray-500/25 text-white rounded shadow-lg border-b-2 border-white">
                         <th className="p-5">
                             <p className="text-sm leading-none font-normal">
                                 <b>Resource</b>
@@ -44,7 +45,7 @@ function HomeViewResourcesList()
 
                     {mocked_data.map((i) => {
                         return (
-                            <tr className="hover:bg-slate-50 hover:text-black text-white text-center border-2 border-white" title={i.description}>
+                            <tr className="hover:bg-slate-50 hover:text-black text-white text-center border-b-1 border-white" title={i.description}>
                                 <td className="p-4">
                                 <p className="text-sm font-bold">
                                     {i.resource}
