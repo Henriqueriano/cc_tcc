@@ -5,13 +5,13 @@ function HomeView()
 {
     return (
         <main className = 'grid grid-cols-6 gap-4 mx-5'>
-            <aside className='my-4'>
+            <aside className='py-4'>
                 <HandleFeaturesComponent />
             </aside>
 
-            <section className = 'col-span-5 h-screen'>
+            <section className = 'col-span-5 h-screen py-4'>
                 <div className = 'flex h-1/2 gap-4 pb-4'>
-                    <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center bg-gray-500/25 border-2 border-white'>
+                    <div className = 'bg-slate-50 text-black w-1/2 text-center bg-gray-500/25 border-2 border-black'>
                             <HomeViewGraph />
                     </div>
                     <div className = 'w-1/2 text-center overflow-auto border-2 border-white'>
@@ -21,9 +21,9 @@ function HomeView()
 
                 <div className = 'flex h-1/2 gap-4'>
                     <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center'>
-                        <b><p>Numéric View</p></b>
+                        <b><p>Numeric View</p></b>
                     </div>
-                    <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center bg-gray-500/25 border-2 border-white'>
+                    <div className = 'bg-slate-50 text-black w-1/2 text-center bg-gray-500/25 border-2 border-black'>
                         <b><p>Server Status View</p></b>
                     </div>
 
