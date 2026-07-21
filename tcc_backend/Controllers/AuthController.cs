@@ -25,12 +25,12 @@ public class AuthController : ControllerBase
 
         RetrieveAuthDto response = await _authServices.Login(request);
 
-        if (string.IsNullOrEmpty(response.Token)) 
+        if (string.IsNullOrEmpty(response.RefreshToken)) 
         {
            RetrieveAuthDto backdata = new RetrieveAuthDto(); 
         }
 
-        response.Token = "mocked_token";
+        response.RefreshToken = "mocked_token";
         return response;
     }
 

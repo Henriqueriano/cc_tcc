@@ -4,6 +4,6 @@ namespace tcc_backend.Dtos;
 
 public class RetrieveAuthDto
 {
-    public string Token { get; set; }
+    public string RefreshToken { get; set; }
 }
 

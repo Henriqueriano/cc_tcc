@@ -6,10 +6,8 @@ services:
     ports:
       - "7001:7001"
     volumes:
-      # Mount your local folder containing index files to /index inside the container
-      - ./my-index-folder:/index
+      - ./Qlever_data:/index
     environment:
-      # Replace 'olympics' with the prefix of your specific index files (e.g., olympics.index.bd)
       - INDEX_PREFIX=olympics
     command: ServerMain -p 7001 -i /index/vldb-easy
 
@@ -20,8 +18,23 @@ services:
     ports:
       - "7002:7002"
     environment:
-      # Points the UI backend to the container name of the SPARQL engine
       - QLEVER_BACKEND_URL=http://qlever-backend:7001
     depends_on:
       - qlever-backend
 
+  postgres:
+    image: postgres:17
+    container_name: postgres_instance
+    restart: always
+    environment:
+      POSTGRES_USER: application_manager
+      POSTGRES_PASSWORD: K33NUH5@?3z5
+      POSTGRES_DB: tcc
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./Postgres_data:/var/lib/postgresql/data
+    shm_size: 128mb
+
+    volumes:
+      postgres_data:

@@ -1,13 +1,15 @@
+using dotenv.net;
+using Microsoft.OpenApi;
 using tcc_backend.Services;
 using tcc_backend.Interfaces;
 using tcc_backend.Middlewares;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi;
-using System.Collections.Generic;
 
+DotEnv.Load();
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 #region Swagger

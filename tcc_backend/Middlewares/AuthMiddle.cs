@@ -11,13 +11,19 @@ public class AuthMiddleware
     public AuthMiddleware(RequestDelegate next) => _next = next;
     public async Task InvokeAsync(HttpContext context)
     {
-        var token = context.Request.Headers["Authorization"].
-                    FirstOrDefault()?.Split(" ").Last();
+        var token = context
+                    .Request
+                    .Headers
+                    .Authorization
+                    .FirstOrDefault()?
+                    .Split(" ")
+                    .Last();
 
         if (token == null || !ValidateToken(token))
         {
             context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-            await context.Response.WriteAsync("Unauthorized");
+            await context.Response
+            .WriteAsync("Unauthorized");
             return;
         }
         await _next(context);
