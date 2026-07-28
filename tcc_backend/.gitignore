@@ -6,6 +6,11 @@
 # dotenv files
 .env
 
+# docker data
+Fusekai_data/
+Postgres_data/
+Qlever_data/
+
 # User-specific files
 *.rsuser
 *.suo

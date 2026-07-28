@@ -16,6 +16,9 @@ function HomeViewResourcesList()
         {resource: 'requests_per_min', amount: 50, percent: 50, description: 'crit'},
         {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
         {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
+        {resource: 'database_description', amount: 50, percent: 50, description: 'crit'},
     ]
     useEffect(() => {});
 

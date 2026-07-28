@@ -11,17 +11,6 @@ services:
       - INDEX_PREFIX=olympics
     command: ServerMain -p 7001 -i /index/vldb-easy
 
-  qlever-ui:
-    image: qleverdev/qlever-ui:latest
-    container_name: qlever-ui
-    restart: unless-stopped
-    ports:
-      - "7002:7002"
-    environment:
-      - QLEVER_BACKEND_URL=http://qlever-backend:7001
-    depends_on:
-      - qlever-backend
-
   postgres:
     image: postgres:17
     container_name: postgres_instance
@@ -35,6 +24,17 @@ services:
     volumes:
       - ./Postgres_data:/var/lib/postgresql/data
     shm_size: 128mb
-
+  
+  fuseki:
+    image: stain/jena-fuseki:latest
+    container_name: jena_fuseki_server
+    restart: unless-stopped
+    user: "${UID}:${GID}"
+    ports:
+      - "3131:3131"
+    environment:
+      - FUSEKI_HOME=/jena-fuseki
+      - FUSEKI_BASE=/fuseki-base
+      - JVM_ARGS=-Xmx2g
     volumes:
-      postgres_data:
+      - ./Fusekai_data:/fuseki-base

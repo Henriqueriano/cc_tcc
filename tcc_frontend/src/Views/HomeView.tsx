@@ -20,7 +20,7 @@ function HomeView()
                 </div>
 
                 <div className = 'flex h-1/2 gap-4'>
-                    <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center'>
+                    <div className = 'hover:bg-slate-50 hover:text-black w-1/2 text-center border-2 border-white'>
                         <b><p>Numeric View</p></b>
                     </div>
                     <div className = 'bg-slate-50 text-black w-1/2 text-center bg-gray-500/25 border-2 border-black'>

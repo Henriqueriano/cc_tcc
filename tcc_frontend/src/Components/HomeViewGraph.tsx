@@ -2,9 +2,11 @@
 // https://mui.com/x/react-charts/radar/
 // bun add @mui/x-charts @mui/material @emotion/react @emotion/styled
 import {RadarChart} from '@mui/x-charts/RadarChart';
+import Box from '@mui/material/Box';
 function HomeViewGraph() 
 {
     return (
+        <Box  sx=  {{width: '100%'}}>
         <RadarChart
             height={300}
             series={[{ label: 'Categoryes', data: [120, 98, 86, 99, 85, 65] }]}
@@ -19,6 +21,7 @@ function HomeViewGraph()
                 ],
             }}
         />  
+        </Box>
     )
 }
 
